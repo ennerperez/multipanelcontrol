@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$description$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://creativecommons.org/licenses/publicdomain/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/ennerperez/multipanelcontrol/master/.editoricon.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This control acts like a tab control but without the tabs...</description>
+    <summary />
+    <releaseNotes />
+    <copyright>$copyright$</copyright>
+    <language>en</language>
+    <tags>C# .NET 2.0 Multi Panel</tags>
+    <dependencies />
+  </metadata>
+  <files />
+</package>
