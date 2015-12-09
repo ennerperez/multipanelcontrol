@@ -67,7 +67,7 @@ public class MultiPanelPage : ContainerControl
         public ControlCollection(Control owner)
             : base(owner)
         {
-            if (owner == null)
+            if (owner == null || owner.GetType() != typeof(MultiPanelPage))
                 throw new ArgumentNullException("owner", "Tried to create a MultiPanelPage.ControlCollection with a null owner.");
             MultiPanelPage c = owner as MultiPanelPage;
             if (c == null)

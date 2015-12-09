@@ -16,6 +16,67 @@ namespace Design
         }
 
         /// <summary>
+        /// Overridden. Inherited from <see cref="ControlDesigner"/>.
+        /// </summary>
+        public override DesignerVerbCollection Verbs
+        {
+            get
+            {
+                if (_verbs == null)
+                {
+                    _verbs = new DesignerVerbCollection();
+                    _verbs.Add(new DesignerVerb("Select MultiPanel", new EventHandler(OnSelectManager)));
+                }
+                return _verbs;
+            }
+        }
+
+        private MultiPanelPage HostControl
+        {
+            get { return (MultiPanelPage)this.Control; }
+        }
+
+        private ISelectionService m_SelectionService;
+        public ISelectionService SelectionService
+        {
+            get
+            {
+                if (m_SelectionService == null)
+                {
+                    m_SelectionService = (ISelectionService)GetService(typeof(ISelectionService));
+                }
+                return m_SelectionService;
+            }
+        }
+
+        /// <summary>
+        /// Event handler for the "Select MultiPanel" verb.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="ea">
+        /// Some <see cref="EventArgs"/>.
+        /// </param>
+        private void OnSelectManager(object sender, EventArgs ea)
+        {
+            IDesignerHost dh = (IDesignerHost)GetService(typeof(IDesignerHost));
+            if (dh != null)
+            {
+                DesignerTransaction dt = dh.CreateTransaction("Select MultiPanel");
+
+                if (this.HostControl.Parent != null)
+                {
+                    this.SelectionService.SetSelectedComponents(new Component[] { this.HostControl.Parent });
+                }
+                
+                dt.Commit();
+
+                dt.Cancel();
+            }
+        }
+        
+        /// <summary>
         /// Shadows the <see cref="MultiPanelPage.Text"/> property.
         /// </summary>
         public string Text
@@ -107,10 +168,18 @@ namespace Design
         private const int WM_LBUTTONDBLCLK = 0x0203;
         #endregion
 
+
+        #region Private Variables
+
         /// <summary>
         /// </summary>
         private MultiPanelPage _page;
         private Font _font = new Font("Courier New", 8F, FontStyle.Bold);
         private StringFormat _rightfmt = new StringFormat(StringFormatFlags.NoWrap | StringFormatFlags.DirectionRightToLeft);
+
+        private DesignerVerbCollection _verbs;
+
+        #endregion
+
     }
 }
