@@ -27,7 +27,9 @@ Trying to be as lazy as I can, I've searched the Internet for something that I c
 After a few minutes, I found what I was looking for - an article on this very site [http://www.codeproject.com/KB/miscctrl/yatabcontrol.aspx](http://www.codeproject.com/KB/miscctrl/yatabcontrol.aspx) written by curtis schlak. This great article provided the basis for my control. 
 
 ##History
-v0.1 17-June-2009 - Initial version 
+v1.0.0.0 17-June-2009 - Initial version 
+
+v1.0.0.1 09-December-2015 - Designer enhancements
 
 ##License
 This article, along with any associated source code and files, is licensed under A Public Domain dedication
