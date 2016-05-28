@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -7,11 +8,15 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Liron.Windows.Forms")]
 [assembly: AssemblyDescription("A Multipanel Control")]
-[assembly: AssemblyConfiguration("")]
+#if DEBUG
+[assembly: AssemblyConfiguration("DEBUG")]
+#else
+[assembly: AssemblyConfiguration("RELEASE")]
+#endif
 [assembly: AssemblyCompany("liron-levi")]
 [assembly: AssemblyProduct("Liron.Windows.Forms")]
-[assembly: AssemblyCopyright("Copyright © 2009")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © liron-levi")]
+[assembly: AssemblyTrademark("Liron.Windows.Forms")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -20,7 +25,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("53049316-bd16-4638-9a44-e16f2cc6a3cb")]
+[assembly: Guid("53049316-BD16-4638-9A44-E16F2CC6A3CB")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,5 +36,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]
