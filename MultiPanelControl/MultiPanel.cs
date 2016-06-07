@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 
-[ToolboxBitmap(typeof(MultiPanel), "multipanel")]
+[ToolboxBitmap(typeof(MultiPanel), "MultiPanel")]
 [Designer(typeof(Design.MultiPanelDesigner))]
 public class MultiPanel : Panel
 {
