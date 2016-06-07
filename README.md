@@ -2,9 +2,11 @@
 
 # MultiPanel Control
 
+This control acts like a tab control but without the tabs...
+
 Original article can be found at [http://www.codeproject.com/Articles/37397/A-Multipanel-Control-in-C](http://www.codeproject.com/Articles/37397/A-Multipanel-Control-in-C)
 
-All credits are for [liron.levi](http://www.codeproject.com/Members/liron-levi), I decided to place it in GitHub to make a NuGet package, because is the most usefull control in Windows Forms to me.
+All credits are for [liron.levi](http://www.codeproject.com/Members/liron-levi), I decided to place it in GitHub to make a NuGet package, because is the most useful control in Windows Forms to me.
 
 // liron.levi thanks so much. Since 2009.
 
@@ -20,7 +22,6 @@ See the [changelog](CHANGELOG.md) for changes.
 * [Implementing](#implementing)
 * [Introduction](#introduction)
 * [Background](#background)
-* [History](#history)
 * [License](#license)
 
 ### Implementing

@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{093E5C
 	ProjectSection(SolutionItems) = preProject
 		.editoricon.png = .editoricon.png
 		.gitignore = .gitignore
+		MultiPanel.ico = MultiPanel.ico
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D5BDF846-6145-42DA-966D-4F2EFBB2827D}"
