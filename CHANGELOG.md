@@ -2,7 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.3] - [2016-06-06]
+## [1.1.5] - [2017-10-10]
+### Added
+- SelectedPanelChanged Event
+
+## [1.1.4] - [2016-06-06]
 ### Changed
 - Moved to .NET 4.0
 
