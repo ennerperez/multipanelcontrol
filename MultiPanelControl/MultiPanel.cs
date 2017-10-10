@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System;
 
 [ToolboxBitmap(typeof(MultiPanel), "MultiPanel")]
 [Designer(typeof(Design.MultiPanelDesigner))]
@@ -21,10 +21,18 @@ public class MultiPanel : Panel
                         child.Visible = true;
                     else
                         child.Visible = false;
-                } // foreach
+                }
+                OnSelectedPanelChanged(EventArgs.Empty);
             }
         }
     }
+
+    protected virtual void OnSelectedPanelChanged(EventArgs e)
+    {
+        SelectedPanelChanged?.Invoke(this, e);
+    }
+
+    public EventHandler SelectedPanelChanged;
 
     protected override void OnPaint(PaintEventArgs e)
     {
