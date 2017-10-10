@@ -32,7 +32,7 @@ public class MultiPanel : Panel
         SelectedPanelChanged?.Invoke(this, e);
     }
 
-    public EventHandler SelectedPanelChanged;
+    public event EventHandler SelectedPanelChanged;
 
     protected override void OnPaint(PaintEventArgs e)
     {
